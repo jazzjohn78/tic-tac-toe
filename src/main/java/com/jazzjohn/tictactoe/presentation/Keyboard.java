@@ -24,16 +24,6 @@ public final class Keyboard {
         moveKeys.put("9", "1_3");
     }
 
-    /*public String inputMove(int playerTurn) throws IllegalMoveException {
-        System.out.println("Gracz nr " +  playerTurn + " - podaj kolejny ruch (1 - 9):");
-        String input = scanner.next();
-        if(moveKeys.containsKey(input)) {
-           return moveKeys.get(input);
-        } else {
-            throw new IllegalMoveException("illegal move, wrong input");
-        }
-    }*/
-
     public String inputMove(int playerTurn) {
         System.out.println("Gracz nr " +  playerTurn + " - podaj kolejny ruch (1 - 9):");
         String input = scanner.next();

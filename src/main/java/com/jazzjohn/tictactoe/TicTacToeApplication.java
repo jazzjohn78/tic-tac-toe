@@ -8,6 +8,7 @@ import com.jazzjohn.tictactoe.presentation.RepeatedMoveException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -19,36 +20,51 @@ public class TicTacToeApplication {
         Keyboard keyboard = new Keyboard();
         String nextMove;
         int gameStatus = 0;
+        Random random = new Random();
 
         //gameplay
-        //for(int i = 1; i <= board.getBoardSize() * board.getBoardSize(); i++) {
         while(gameStatus == 0) {
-            board.printBoard(moveData);
-            try {
-                nextMove = keyboard.inputMove(moveData.getPlayerTurn());
-                nextMove = keyboard.verifyInput(nextMove);
-                moveData.setMoveValue(nextMove);
-                //check if game ended
-                gameStatus =  moveData.getGameStatus(board.getBoardSize());
-                if(gameStatus == 0) {
-                    moveData.nextTurn();
-                } else if(gameStatus == 3) {
-                    board.printBoard(moveData);
-                    System.out.println("Koniec gry - remis.");
-                    System.out.println("-----------------------------");
-                } else {
-                    board.printBoard(moveData);
-                    System.out.println("Koniec gry - gracz nr " + gameStatus + " wygral, gratuluje!");
-                    System.out.println("-----------------------------");
+            if(moveData.getPlayerTurn() == 1) {
+                board.printBoard(moveData);
+                //player move
+                try {
+                    nextMove = keyboard.inputMove(moveData.getPlayerTurn());
+                    nextMove = keyboard.verifyInput(nextMove);
+                    moveData.setMoveValue(nextMove);
+                } catch (IllegalMoveException e) {
+                    System.out.println("!!! Podana pozycja nie jest nieprawidlowa. Upewnij się, ze wprowadzasz dane zgodnie z instrukcja.");
+                    continue;
+                } catch (RepeatedMoveException e) {
+                    System.out.println("!!! Podane miejsce jest już zajete, podaj pozycje wolnego pola.");
+                    continue;
                 }
+            } else {
+                //computer move
+                int row = random.nextInt(board.getBoardSize()) + 1;
+                int column = random.nextInt(board.getBoardSize()) + 1;
+                try {
+                    moveData.setMoveValue(row + "_" + column);
+                } catch (RepeatedMoveException e) {
+                    continue;
+                }
+            }
 
-            } catch (IllegalMoveException e) {
-                System.out.println("!!! Podana pozycja nie jest nieprawidlowa. Upewnij się, ze wprowadzasz dane zgodnie z instrukcja.");
-            } catch (RepeatedMoveException e) {
-                System.out.println("!!! Podane miejsce jest już zajete, podaj pozycje wolnego pola.");
+            //check if game ended
+            gameStatus =  moveData.getGameStatus(board.getBoardSize());
+            if(gameStatus == 0) {
+                moveData.nextTurn();
+            } else if(gameStatus == 3) {
+                board.printBoard(moveData);
+                System.out.println("Koniec gry - remis.");
+                System.out.println("-----------------------------");
+            } else {
+                board.printBoard(moveData);
+                System.out.println("Koniec gry - gracz nr " + gameStatus + " wygral, gratuluje!");
+                System.out.println("-----------------------------");
             }
 
         }
+
     }
 
 }
