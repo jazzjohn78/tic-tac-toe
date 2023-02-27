@@ -4,15 +4,22 @@ import com.jazzjohn.tictactoe.data.MoveData;
 
 public final class Board {
     private final int boardSize;
+    private final int symbolsRequired;
     private final String player1Symbol = "O";
     private final String player2Symbol = "X";
 
     public Board(final int boardSize) {
+
         this.boardSize = boardSize;
+        this.symbolsRequired = boardSize == 3 ? 3 : 5;
     }
 
     public int getBoardSize() {
         return boardSize;
+    }
+
+    public int getSymbolsRequired() {
+        return symbolsRequired;
     }
 
     public void printBoard(MoveData moveData) {

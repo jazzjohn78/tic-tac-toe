@@ -12,31 +12,38 @@ public final class Keyboard {
 
     public Keyboard() {
         this.scanner = new Scanner(System.in);
+    }
+
+    public void initMoveKeys(int boardSize) {
         this.moveKeys = new HashMap<>();
-        moveKeys.put("1", "3_1");
-        moveKeys.put("2", "3_2");
-        moveKeys.put("3", "3_3");
-        moveKeys.put("4", "2_1");
-        moveKeys.put("5", "2_2");
-        moveKeys.put("6", "2_3");
-        moveKeys.put("7", "1_1");
-        moveKeys.put("8", "1_2");
-        moveKeys.put("9", "1_3");
+        for(int i = 1; i <= boardSize; i++) {
+            for (int j = 1; j <= boardSize; j++) {
+                moveKeys.put(i + "-" + j, i + "_" + j);
+            }
+        }
     }
 
     public String inputMove(int playerTurn) {
-        System.out.println("Gracz nr " +  playerTurn + " - podaj kolejny ruch (1 - 9):");
         String input = scanner.next();
         return input;
     }
 
-    public String verifyInput(String input) throws IllegalMoveException {
+    public String verifyInput(String input) throws IllegalInputException {
         if(moveKeys.containsKey(input)) {
             return moveKeys.get(input);
         } else {
-            throw new IllegalMoveException("illegal move, wrong input");
+            throw new IllegalInputException("illegal move, wrong input");
         }
     }
 
-
+    public int inputBoardSize() throws IllegalInputException {
+        String input = scanner.next();
+        if(input.equals("1")) {
+            return 3;
+        } else if(input.equals("2")) {
+            return 10;
+        } else {
+            throw new IllegalInputException("wrong board size");
+        }
+    }
 }

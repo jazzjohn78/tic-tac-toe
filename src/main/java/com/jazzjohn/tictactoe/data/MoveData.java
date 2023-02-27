@@ -38,44 +38,119 @@ public class MoveData {
         }
     }
 
-    public Integer getGameStatus(int boardSize) {
+    public Integer getGameStatus(int boardSize, int symbolsRequired) {
         //0 - in progress, 1,2 - win, 3 - draw
         //rows
         for(int i = 1; i <= boardSize; i++) {
+            int seriesStart = 1;    //id where current series begins
             for(int j = 1; j <= boardSize; j++) {
-                if(!moveExists(i + "_" + j)  ||  getMoveValue(i + "_" + j)  != getMoveValue(i + "_" + 1)) {
+                if(seriesStart > boardSize + 1 - symbolsRequired) {
                     break;
-                } else if(j == boardSize) {
-                    return getMoveValue(i + "_" + 1);
+                } else if(!moveExists(i + "_" + j)) {
+                    seriesStart = j + 1;
+                } else if(getMoveValue(i + "_" + j)  != getMoveValue(i + "_" + seriesStart)) {
+                    seriesStart = j;
+                } else if(j == seriesStart + symbolsRequired - 1) {
+                    return getMoveValue(i + "_" + j);
                 }
             }
         }
         //columns
         for(int j = 1; j <= boardSize; j++) {
+            int seriesStart = 1;    //id where current series begins
             for(int i = 1; i <= boardSize; i++) {
-                if(!moveExists(i + "_" + j)  ||  getMoveValue(i + "_" + j)  != getMoveValue(1 + "_" + j)) {
+                if(seriesStart > boardSize + 1 - symbolsRequired) {
                     break;
-                } else if(i == boardSize) {
-                    return getMoveValue(1 + "_" + j);
+                } else if(!moveExists(i + "_" + j)) {
+                    seriesStart = i + 1;
+                } else if(getMoveValue(i + "_" + j)  != getMoveValue(seriesStart + "_" + j)) {
+                    seriesStart = i;
+                } else if(i == seriesStart + symbolsRequired - 1) {
+                    return getMoveValue(i + "_" + j);
                 }
             }
         }
-        //diagonal 1
-        for(int i = 1; i <= boardSize; i++) {
-            if(!moveExists(i + "_" + i)  ||  getMoveValue(i + "_" + i)  != getMoveValue(1 + "_" + 1)) {
-                break;
-            } else if(i == boardSize) {
-                return getMoveValue(1 + "_" + 1);
+
+        //diagonal \ starts from row 1 col 1-6* (* - example value for 10x10)
+        for(int i = 1; i <= boardSize + 1 - symbolsRequired; i++){
+            int seriesStart = i;    //id where current series begins
+            for(int j = seriesStart; j <= boardSize; j++) {
+                int row = j - i + 1;
+                int col = j;
+                int seriesStartRow = seriesStart - i + 1;
+                int seriesStartCol = seriesStart;
+                if(seriesStart > boardSize + 1 - symbolsRequired) {
+                    break;
+                } else if(!moveExists(row + "_" + col)) {
+                    seriesStart = j + 1;
+                } else if(getMoveValue(row + "_" + col)  != getMoveValue(seriesStartRow + "_" + seriesStartCol)) {
+                    seriesStart = j;
+                } else if(j == seriesStart + symbolsRequired - 1) {
+                    return getMoveValue(row + "_" + col);
+                }
             }
         }
-        //diagonal 2
-        for(int i = 1; i <= boardSize; i++) {
-            if(!moveExists(i + "_" + (boardSize - i + 1))  ||  getMoveValue(i + "_" + (boardSize - i + 1))  != getMoveValue(1 + "_" + (boardSize))) {
-                break;
-            } else if(i == boardSize) {
-                return getMoveValue(1 + "_" + (boardSize));
+
+        //diagonal \ starts from row 2-6* col 1 (* - example value for 10x10)
+        for(int i = 2; i <= boardSize + 1 - symbolsRequired; i++){
+            int seriesStart = i;    //id where current series begins
+            for(int j = seriesStart; j <= boardSize; j++) {
+                int row = j;
+                int col = j - i + 1;
+                int seriesStartRow = seriesStart;
+                int seriesStartCol = seriesStart - i + 1;
+                if(seriesStart > boardSize + 1 - symbolsRequired) {
+                    break;
+                } else if(!moveExists(row + "_" + col)) {
+                    seriesStart = j + 1;
+                } else if(getMoveValue(row + "_" + col)  != getMoveValue(seriesStartRow + "_" + seriesStartCol)) {
+                    seriesStart = j;
+                } else if(j == seriesStart + symbolsRequired - 1) {
+                    return getMoveValue(row + "_" + col);
+                }
             }
         }
+
+        //diagonal / starts from row 1 col 6*-10* (* - example value for 10x10)
+        for(int i = symbolsRequired; i <= boardSize; i++){
+            int seriesStart = boardSize + 1 - i;    //id where current series begins
+            for(int j = seriesStart; j <= boardSize; j++) {
+                int row = i + j - boardSize;
+                int col = boardSize + 1 - j;
+                int seriesStartRow = i + seriesStart - boardSize;
+                int seriesStartCol = boardSize + 1 - seriesStart;
+                if(seriesStart > boardSize + 1 - symbolsRequired) {
+                    break;
+                } else if(!moveExists(row + "_" + col)) {
+                    seriesStart = j + 1;
+                } else if(getMoveValue(row + "_" + col)  != getMoveValue(seriesStartRow + "_" + seriesStartCol)) {
+                    seriesStart = j;
+                } else if(j == seriesStart + symbolsRequired - 1) {
+                    return getMoveValue(row + "_" + col);
+                }
+            }
+        }
+
+        //diagonal / starts from row 2-6* col 10* (* - example value for 10x10)
+        for(int i = 2; i <= boardSize + 1 - symbolsRequired; i++){
+            int seriesStart = i;    //id where current series begins
+            for(int j = seriesStart; j <= boardSize; j++) {
+                int row = j;
+                int col = boardSize + i - j;
+                int seriesStartRow = seriesStart;
+                int seriesStartCol = boardSize + i - seriesStart;
+                if(seriesStart > boardSize + 1 - symbolsRequired) {
+                    break;
+                } else if(!moveExists(row + "_" + col)) {
+                    seriesStart = j + 1;
+                } else if(getMoveValue(row + "_" + col)  != getMoveValue(seriesStartRow + "_" + seriesStartCol)) {
+                    seriesStart = j;
+                } else if(j == seriesStart + symbolsRequired - 1) {
+                    return getMoveValue(row + "_" + col);
+                }
+            }
+        }
+
         //draw
         for(int i = 1; i <= boardSize; i++) {
             for(int j = 1; j <= boardSize; j++) {
@@ -86,6 +161,7 @@ public class MoveData {
                 }
             }
         }
+
         //in progress
         return 0;
     }
