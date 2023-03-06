@@ -25,40 +25,36 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //row 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                //row 2
-                moveData2.setMoveValue("2_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_1");
-                //row 3
-                moveData3.setMoveValue("3_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_3");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //row 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            //row 2
+            moveData2.setMoveValue("2_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_1");
+            //row 3
+            moveData3.setMoveValue("3_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_3");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -78,46 +74,42 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //row 1
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                //row 2
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_1");
-                //row 3
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_3");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //row 1
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            //row 2
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_1");
+            //row 3
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_3");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -137,40 +129,36 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //column 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                //column 2
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_2");
-                //column 3
-                moveData3.setMoveValue("3_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //column 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            //column 2
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_2");
+            //column 3
+            moveData3.setMoveValue("3_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -190,46 +178,42 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //column 1
-                moveData1.setMoveValue("2_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                //column 2
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                //column 3
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //column 1
+            moveData1.setMoveValue("2_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            //column 2
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            //column 3
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -248,30 +232,26 @@ class TicTacToeApplicationTests {
             MoveData moveData2 = new MoveData();
 
             //When
-            try {
-                //diagonal 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                //diagonal 2
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_1");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //diagonal 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            //diagonal 2
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_1");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
 
@@ -288,34 +268,30 @@ class TicTacToeApplicationTests {
             MoveData moveData2 = new MoveData();
 
             //When
-            try {
-                //diagonal 1
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                //diagonal 2
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_1");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //diagonal 1
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            //diagonal 2
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_1");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
 
@@ -333,64 +309,60 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //draw 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_2");
-                //draw 2
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_3");
-                //draw 3
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_2");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //draw 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_2");
+            //draw 2
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_3");
+            //draw 3
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_2");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -410,61 +382,57 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //progress 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                moveData1.nextTurn();
-                //progress 2
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_1");
-                moveData2.nextTurn();
-                //progress 3
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_3");
-                moveData3.nextTurn();
-            } catch (RepeatedMoveException e) {
-
-            }
+            //progress 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            moveData1.nextTurn();
+            //progress 2
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_1");
+            moveData2.nextTurn();
+            //progress 3
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_3");
+            moveData3.nextTurn();
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -537,64 +505,60 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //row 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_5");
-                //row 4
-                moveData2.setMoveValue("4_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_5");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_7");
-                //row 10
-                moveData3.setMoveValue("10_9");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_5");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_7");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_6");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_4");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_8");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //row 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_5");
+            //row 4
+            moveData2.setMoveValue("4_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_5");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_7");
+            //row 10
+            moveData3.setMoveValue("10_9");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_5");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_7");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_6");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_4");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_8");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -614,70 +578,66 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //row 1
-                moveData1.setMoveValue("10_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_5");
-                //row 4
-                moveData2.setMoveValue("10_10");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_5");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("4_7");
-                //row 10
-                moveData3.setMoveValue("10_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_9");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_5");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_7");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_6");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_4");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("10_8");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //row 1
+            moveData1.setMoveValue("10_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_5");
+            //row 4
+            moveData2.setMoveValue("10_10");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_5");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("4_7");
+            //row 10
+            moveData3.setMoveValue("10_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_9");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_5");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_7");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_6");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_4");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("10_8");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -697,64 +657,60 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //column 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_1");
-                //column 6
-                moveData2.setMoveValue("10_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("9_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("8_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("7_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("6_6");
-                //column 10
-                moveData3.setMoveValue("5_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("6_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("7_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("4_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_4");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_10");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //column 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_1");
+            //column 6
+            moveData2.setMoveValue("10_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("9_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("8_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("7_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("6_6");
+            //column 10
+            moveData3.setMoveValue("5_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("6_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("7_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("4_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_4");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_10");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -774,70 +730,66 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //column 1
-                moveData1.setMoveValue("10_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_1");
-                //column 6
-                moveData2.setMoveValue("10_10");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("10_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("9_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("8_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("7_6");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("6_6");
-                //column 10
-                moveData3.setMoveValue("5_5");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("5_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("6_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("7_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("4_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_4");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_10");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //column 1
+            moveData1.setMoveValue("10_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_1");
+            //column 6
+            moveData2.setMoveValue("10_10");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("10_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("9_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("8_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("7_6");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("6_6");
+            //column 10
+            moveData3.setMoveValue("5_5");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("5_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("6_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("7_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("4_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_4");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_10");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -860,118 +812,114 @@ class TicTacToeApplicationTests {
             MoveData moveData6 = new MoveData();
 
             //When
-            try {
-                //diagonal 1 \
-                moveData1.setMoveValue("4_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_8");
-                //diagonal 2 \
-                moveData2.setMoveValue("10_5");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("9_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("8_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("7_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("6_1");
-                //diagonal 3 \
-                moveData3.setMoveValue("1_6");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_7");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_8");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("4_9");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_4");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("5_10");
-                //diagonal 4 /
-                moveData4.setMoveValue("6_6");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_1");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("5_7");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_2");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("4_8");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_3");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("7_5");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_4");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("8_4");
-                //diagonal 5 /
-                moveData5.setMoveValue("1_5");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_1");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("2_4");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_2");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("3_3");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_3");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("4_2");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_4");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("5_1");
-                //diagonal 6 /
-                moveData6.setMoveValue("10_6");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_1");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("9_7");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_2");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("8_8");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_3");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("7_9");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_4");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("6_10");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //diagonal 1 \
+            moveData1.setMoveValue("4_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_8");
+            //diagonal 2 \
+            moveData2.setMoveValue("10_5");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("9_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("8_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("7_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("6_1");
+            //diagonal 3 \
+            moveData3.setMoveValue("1_6");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_7");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_8");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("4_9");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_4");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("5_10");
+            //diagonal 4 /
+            moveData4.setMoveValue("6_6");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_1");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("5_7");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_2");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("4_8");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_3");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("7_5");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_4");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("8_4");
+            //diagonal 5 /
+            moveData5.setMoveValue("1_5");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_1");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("2_4");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_2");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("3_3");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_3");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("4_2");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_4");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("5_1");
+            //diagonal 6 /
+            moveData6.setMoveValue("10_6");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_1");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("9_7");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_2");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("8_8");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_3");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("7_9");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_4");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("6_10");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -1000,130 +948,126 @@ class TicTacToeApplicationTests {
             MoveData moveData6 = new MoveData();
 
             //When
-            try {
-                //diagonal 1 \
-                moveData1.setMoveValue("10_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_8");
-                //diagonal 2 \
-                moveData2.setMoveValue("10_10");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("10_5");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("9_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("8_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("7_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_4");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("6_1");
-                //diagonal 3 \
-                moveData3.setMoveValue("10_10");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_6");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_7");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_8");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("4_9");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_4");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("5_10");
-                //diagonal 4 /
-                moveData4.setMoveValue("10_10");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("6_6");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_1");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("5_7");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_2");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("4_8");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_3");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("7_5");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("1_4");
-                moveData4.nextTurn();
-                moveData4.setMoveValue("8_4");
-                //diagonal 5 /
-                moveData5.setMoveValue("10_10");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_5");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_1");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("2_4");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_2");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("3_3");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_3");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("4_2");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("1_4");
-                moveData5.nextTurn();
-                moveData5.setMoveValue("5_1");
-                //diagonal 6 /
-                moveData6.setMoveValue("10_10");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("10_6");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_1");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("9_7");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_2");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("8_8");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_3");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("7_9");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("1_4");
-                moveData6.nextTurn();
-                moveData6.setMoveValue("6_10");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //diagonal 1 \
+            moveData1.setMoveValue("10_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_8");
+            //diagonal 2 \
+            moveData2.setMoveValue("10_10");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("10_5");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("9_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("8_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("7_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_4");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("6_1");
+            //diagonal 3 \
+            moveData3.setMoveValue("10_10");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_6");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_7");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_8");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("4_9");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_4");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("5_10");
+            //diagonal 4 /
+            moveData4.setMoveValue("10_10");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("6_6");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_1");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("5_7");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_2");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("4_8");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_3");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("7_5");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("1_4");
+            moveData4.nextTurn();
+            moveData4.setMoveValue("8_4");
+            //diagonal 5 /
+            moveData5.setMoveValue("10_10");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_5");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_1");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("2_4");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_2");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("3_3");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_3");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("4_2");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("1_4");
+            moveData5.nextTurn();
+            moveData5.setMoveValue("5_1");
+            //diagonal 6 /
+            moveData6.setMoveValue("10_10");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("10_6");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_1");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("9_7");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_2");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("8_8");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_3");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("7_9");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("1_4");
+            moveData6.nextTurn();
+            moveData6.setMoveValue("6_10");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
@@ -1147,210 +1091,206 @@ class TicTacToeApplicationTests {
             MoveData moveData1 = new MoveData();
 
             //When
-            try {
-                //draw 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("4_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("6_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("5_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("7_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("8_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("9_9");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_10");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_4");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_5");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_6");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_7");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_8");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("10_9");
-            } catch (RepeatedMoveException e) {
-
-            }
+            //draw 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("4_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("6_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("5_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("7_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("8_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("9_9");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_10");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_4");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_5");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_6");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_7");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_8");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("10_9");
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
 
             //Then
@@ -1366,61 +1306,57 @@ class TicTacToeApplicationTests {
             MoveData moveData3 = new MoveData();
 
             //When
-            try {
-                //progress 1
-                moveData1.setMoveValue("1_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("1_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_2");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_1");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("2_3");
-                moveData1.nextTurn();
-                moveData1.setMoveValue("3_3");
-                moveData1.nextTurn();
-                //progress 2
-                moveData2.setMoveValue("1_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("1_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_1");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("2_3");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_2");
-                moveData2.nextTurn();
-                moveData2.setMoveValue("3_1");
-                moveData2.nextTurn();
-                //progress 3
-                moveData3.setMoveValue("1_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("1_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_3");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_1");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("2_2");
-                moveData3.nextTurn();
-                moveData3.setMoveValue("3_3");
-                moveData3.nextTurn();
-            } catch (RepeatedMoveException e) {
-
-            }
+            //progress 1
+            moveData1.setMoveValue("1_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("1_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_2");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_1");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("2_3");
+            moveData1.nextTurn();
+            moveData1.setMoveValue("3_3");
+            moveData1.nextTurn();
+            //progress 2
+            moveData2.setMoveValue("1_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("1_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_1");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("2_3");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_2");
+            moveData2.nextTurn();
+            moveData2.setMoveValue("3_1");
+            moveData2.nextTurn();
+            //progress 3
+            moveData3.setMoveValue("1_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("1_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_3");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_1");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("2_2");
+            moveData3.nextTurn();
+            moveData3.setMoveValue("3_3");
+            moveData3.nextTurn();
             int gameStatus1 = moveData1.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus2 = moveData2.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
             int gameStatus3 = moveData3.getGameStatus(board.getBoardSize(), board.getSymbolsRequired());
