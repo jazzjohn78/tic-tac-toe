@@ -5,6 +5,7 @@ import com.jazzjohn.tictactoe.presentation.Board;
 import com.jazzjohn.tictactoe.presentation.IllegalInputException;
 import com.jazzjohn.tictactoe.presentation.Keyboard;
 import com.jazzjohn.tictactoe.presentation.RepeatedMoveException;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -448,10 +449,9 @@ class TicTacToeApplicationTests {
             //Given
             Board board = new Board(3);
             MoveData moveData = new MoveData();
-            Boolean exceptionThrown = false;
 
-            //When
-            try {
+            //When & Then
+            RepeatedMoveException exceptionThrown = Assertions.assertThrows(RepeatedMoveException.class, () -> {
                 moveData.setMoveValue("1_1");
                 moveData.nextTurn();
                 moveData.setMoveValue("1_2");
@@ -459,12 +459,8 @@ class TicTacToeApplicationTests {
                 moveData.setMoveValue("1_3");
                 moveData.nextTurn();
                 moveData.setMoveValue("1_2");
-            } catch (RepeatedMoveException e) {
-                exceptionThrown = true;
-            }
-
-            //Then
-            assertEquals(true, exceptionThrown);
+            }, "RepeatedMoveException was expected");
+            Assertions.assertEquals("illegal move, repeated move", exceptionThrown.getMessage());
         }
 
         @Test
@@ -472,24 +468,12 @@ class TicTacToeApplicationTests {
             //Given
             Keyboard keyboard = new Keyboard();
             keyboard.initMoveKeys(3);
-            Boolean exceptionThrown1 = false;
-            Boolean exceptionThrown2 = false;
 
-            //When
-            try {
-                String move1 =  keyboard.verifyInput("1-3");
-            } catch (IllegalInputException e) {
-                exceptionThrown1 = true;
-            }
-            try {
-                String move2 =  keyboard.verifyInput("abc");
-            } catch (IllegalInputException e) {
-                exceptionThrown2 = true;
-            }
-
-            //Then
-            assertEquals(false, exceptionThrown1);
-            assertEquals(true, exceptionThrown2);
+            //When & Then
+            IllegalInputException exceptionThrown = Assertions.assertThrows(IllegalInputException.class, () -> {
+                String move =  keyboard.verifyInput("abc");
+            }, "IllegalInputException was expected");
+            Assertions.assertEquals("illegal move, wrong input", exceptionThrown.getMessage());
         }
     }
 
@@ -1372,10 +1356,9 @@ class TicTacToeApplicationTests {
             //Given
             Board board = new Board(10);
             MoveData moveData = new MoveData();
-            Boolean exceptionThrown = false;
 
-            //When
-            try {
+            //When & Then
+            RepeatedMoveException exceptionThrown = Assertions.assertThrows(RepeatedMoveException.class, () -> {
                 moveData.setMoveValue("10_1");
                 moveData.nextTurn();
                 moveData.setMoveValue("10_2");
@@ -1383,12 +1366,8 @@ class TicTacToeApplicationTests {
                 moveData.setMoveValue("10_3");
                 moveData.nextTurn();
                 moveData.setMoveValue("10_2");
-            } catch (RepeatedMoveException e) {
-                exceptionThrown = true;
-            }
-
-            //Then
-            assertEquals(true, exceptionThrown);
+            }, "RepeatedMoveException was expected");
+            Assertions.assertEquals("illegal move, repeated move", exceptionThrown.getMessage());
         }
 
         @Test
@@ -1396,24 +1375,14 @@ class TicTacToeApplicationTests {
             //Given
             Keyboard keyboard = new Keyboard();
             keyboard.initMoveKeys(10);
-            Boolean exceptionThrown1 = false;
-            Boolean exceptionThrown2 = false;
 
-            //When
-            try {
-                String move1 =  keyboard.verifyInput("10-3");
-            } catch (IllegalInputException e) {
-                exceptionThrown1 = true;
-            }
-            try {
+            //When & Then
+            IllegalInputException exceptionThrown = Assertions.assertThrows(IllegalInputException.class, () -> {
                 String move2 =  keyboard.verifyInput("abc");
-            } catch (IllegalInputException e) {
-                exceptionThrown2 = true;
-            }
+            }, "IllegalInputException was expected");
 
             //Then
-            assertEquals(false, exceptionThrown1);
-            assertEquals(true, exceptionThrown2);
+            assertEquals("illegal move, wrong input", exceptionThrown.getMessage());
         }
 
     }
